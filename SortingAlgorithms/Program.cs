@@ -15,6 +15,7 @@ namespace SortingAlgorithms
                 Console.Clear();
                 Console.WriteLine("> Array: " + string.Join(", ", array));
                 Console.WriteLine("\n1 - Order with QuickSort");
+                Console.WriteLine("2 - Order with MergeSort");
                 Console.Write("\n> ");
                 int option = int.Parse(Console.ReadLine());
 
@@ -22,7 +23,14 @@ namespace SortingAlgorithms
                 {
                     case 1:
                         orderedArray = array;
-                        orderedArray.OrderUsingQuickSort();
+                        orderedArray = orderedArray.OrderUsingQuickSort();
+                        Console.WriteLine("\n>  Ordered Array: " + string.Join(", ", orderedArray));
+                        Console.ReadKey();
+                        break;
+
+                    case 2:
+                        orderedArray = array;
+                        orderedArray = orderedArray.OrderUsingMergeSort();
                         Console.WriteLine("\n>  Ordered Array: " + string.Join(", ", orderedArray));
                         Console.ReadKey();
                         break;
